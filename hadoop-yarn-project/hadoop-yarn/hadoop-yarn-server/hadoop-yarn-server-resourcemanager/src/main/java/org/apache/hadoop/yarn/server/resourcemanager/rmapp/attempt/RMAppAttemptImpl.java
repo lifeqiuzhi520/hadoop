@@ -1327,7 +1327,7 @@ public class RMAppAttemptImpl implements RMAppAttempt, Recoverable {
     // AFTER the initial saving on app-attempt-start
     // These fields can be visible from outside only after they are saved in
     // StateStore
-    BoundedAppender diags = new BoundedAppender(diagnostics.limit);
+    BoundedAppender diags = new BoundedAppender(diagnostics.getLimit());
 
     // don't leave the tracking URL pointing to a non-existent AM
     if (conf.getBoolean(YarnConfiguration.APPLICATION_HISTORY_ENABLED,

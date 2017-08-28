@@ -115,6 +115,10 @@ public class BoundedAppender {
     return messages.length();
   }
 
+  public int getLimit() {
+    return limit;
+  }
+
   /**
    * Get a string representation of the actual contents, displaying also a
    * header and ellipses when there was a truncate.
